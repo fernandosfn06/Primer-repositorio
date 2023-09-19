@@ -1,14 +1,17 @@
-#include <iostream>
+#include <stdio.h>
+#include <math.h>
 
-int main()
-{
-	int area;
-	int altura;
-	int base;
-	printf("Altura: ");
-	scanf_s("%i", &altura);
-	printf("Base: ");
-	scanf_s("%d", &base);
-	area = base * altura;
-	printf("El rectangulo de %-10i x %-10i tiene area de %-10i", base, altura, area);
+int main() {
+    double radio, area;
+    printf("Por favor, introduce el valor del radio del círculo: ");
+    scanf("%lf", &radio);
+
+    area = M_PI * pow(radio, 2);
+
+    printf("El área del círculo con radio %.2lf es: %.2lf\n", radio, area);
+
+    return 0;
 }
+
+
+
